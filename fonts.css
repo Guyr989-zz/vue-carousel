@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "spacer";
+    src: url("./fonts/spacerregularwebfont.woff") format("woff");
+    unicode-range: U+0040-005A, U+0061-007A;
+}
+
+@font-face {
+    font-family: "assistant-reg";
+    src: url("./fonts/Assistant-Regular.ttf") format("ttf");
+    unicode-range: U+0040-005A, U+0061-007A;
+}
+
+.font-spacer {
+    font-family: "spacer", "sans-serif";
+}
+
+.font-assistant {
+    font-family: "assistant-reg", "sans-serif";
+}

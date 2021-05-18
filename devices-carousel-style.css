@@ -1,0 +1,194 @@
+/* reset */
+#promotedDevices * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#promotedDevices a {
+    text-decoration: none;
+}
+
+/* helpers */
+.flex-container {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-dark-26 {
+    color: #262626;
+}
+
+.text-dark-1a {
+    color: #1a1a1a;
+}
+
+.text-pink {
+    color: #ed2290;
+}
+
+.text-gray-82 {
+    color: #828285;
+}
+
+.bg-pink {
+    background: #ed2290;
+}
+
+.bg-f2 {
+    background: #f2f2f2;
+}
+
+
+/* component specific */
+#promotedDevices {
+    max-width: 1189px;
+    width: 100%;
+    margin: auto;
+}
+
+#promotedDevices .group-titles-wrapper {
+    border-bottom: 2px solid #ececec;
+    padding: 0 3%;
+    margin-bottom: 30px;
+}
+
+#promotedDevices .devices-img {
+    width: 55%;
+}
+
+#promotedDevices .devices-title {
+    margin-bottom: 30px;
+}
+
+#promotedDevices .item-wrap {
+    width: 100%;
+    text-align: center;
+}
+
+#promotedDevices .item-wrap.active {
+    border-bottom: 4px solid #000;
+    margin-bottom: -3px;
+}
+
+#promotedDevices .group-title {
+    margin-bottom: 6px;
+}
+
+#promotedDevices .item-wrap.active .group-title {
+    color: #000;
+}
+
+#promotedDevices .price-before-dis {
+    text-decoration: line-through;
+}
+
+#promotedDevices .superlative-block,
+#promotedDevices .device-description {
+    font-size: 14px;
+}
+
+#promotedDevices .superlative-block {
+    position: relative;
+
+    width: 138px;
+    height: 42px;
+    margin: 0 auto 10px;
+    border-radius: 8px 8px 0 8px;
+    text-align: center;
+
+}
+
+#promotedDevices .superlative-tongue {
+    position: absolute;
+    right: 0;
+    top: 29px;
+    z-index: -1;
+}
+
+#promotedDevices .superlative-tongue::before,
+#promotedDevices .superlative-tongue:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dfdddd;
+}
+
+
+#promotedDevices .superlative-tongue::before {
+    background: #fff;
+    right: 14px;
+    z-index: 1;
+    border-radius: 0;
+}
+
+#promotedDevices .devices-img {
+    margin-bottom: 17px;
+}
+
+#promotedDevices .device-name {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    line-height: 26px;
+
+}
+
+#promotedDevices .device-description {
+    margin-bottom: 30px;
+}
+
+#promotedDevices .device-price {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 45px;
+}
+
+#promotedDevices .order-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 138px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+#promotedDevices .order-btn .arrow {
+    margin: 3px 5px 0 0;
+    font-size: 12px;
+}
+
+.swiper-slide {
+    height: 439px;
+    position: relative;
+}

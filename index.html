@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promoted-devices</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="swiper/swiper.css" />
+    <link rel="stylesheet" href="devices-carousel-style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  </head>
+  <body>
+    <div dir="rtl" id="promotedDevices" class="font-spacer">
+      <div v-if="devicesData">
+        <h2 class="devices-title text-center text-black font-assistant">{{devicesData.Title}}</h2>
+        <div class="group-titles-wrapper flex-container space-between">
+          <div class="item-wrap"  v-for="(group, index) in devicesData.Groups" :key="index" v-bind:class="{ active: index == currentTabInd }" >
+            <a class="group-title text-gray-82" href="https://www.google.com" v-on:click.prevent="selectTabInd(index)"> {{group.Title}} </a>
+          </div>
+        </div>
+
+        <div v-for="(group, index) in devicesData.Groups" :key="index" v-if="index == currentTabInd">
+          <swiper :ref="'mySwiper' + index" :options="swiperOptions">
+            <div class="swiper-container vue-swiper">
+
+              <div class="swiper-wrapper">
+                <div class="swiper-slide text-center" v-for="device in group.Items" :key="device.Id">
+                  <a href="#" :href='device.Url'>
+
+                    <div class="superlative-block flex-center text-black bg-f2">
+                      {{device.Superlative}}
+                      <div class="superlative-tongue"></div>
+                    </div>
+                    <img class="devices-img" :src="'https://www.pelephone.co.il/digitalsite/uploadedImages/' + device.Image.RelativeImageUrl" alt="" />
+                    <h4 class="device-name text-black">{{device.Name}}</h4>
+                    <div class="device-description text-dark-26">{{device.Description}}</div>
+                    
+                    <div class="device-price">
+                      <span class="text-black">
+                        <span v-if="device.BeforeDiscountPrice" class="price-before-dis">&#8362;{{device.BeforeDiscountPrice}}
+                        </span>
+                        <span>{{device.PrePriceText}}</span>
+                        <span class="text-pink">{{device.CashPrice}} &#8362;</span>
+                      </div>
+                    <a class="btn order-btn bg-pink text-white" href="#" :href='device.Url'> לפרטים והזמנה <span class="arrow">></span></a>
+                  </a>
+                  </div>
+                </div>
+              </div>
+          </swiper>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+  <script src="jquery-v1.11.2.js"></script>
+  <script src="./swiper/swiper.min.js"></script>
+  <script src="vue-swiper-settings.js"></script>
+  <script src="common.js"></script>
+  <script src="promoted-devices.js"></script>
+
+  <script></script>
+</html>
